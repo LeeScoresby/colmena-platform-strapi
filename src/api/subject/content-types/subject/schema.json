@@ -4,15 +4,46 @@
   "info": {
     "singularName": "subject",
     "pluralName": "subjects",
-    "displayName": "Subject"
+    "displayName": "Subject",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "year": {
+      "type": "integer"
+    },
+    "semester": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "second"
+      ]
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "school_year": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::school-year.school-year"
+    },
+    "practice_groups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::practice-group.practice-group",
+      "mappedBy": "subject"
     }
   }
 }

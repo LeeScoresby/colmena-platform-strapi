@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "practice_groups",
+  "info": {
+    "singularName": "practice-group",
+    "pluralName": "practice-groups",
+    "displayName": "PracticeGroup"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "school_year": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school-year.school-year",
+      "inversedBy": "practice_groups"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "practice_groups"
+    },
+    "weekDay": {
+      "type": "enumeration",
+      "enum": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ]
+    },
+    "start_hour": {
+      "type": "time"
+    },
+    "end_hour": {
+      "type": "time"
+    }
+  }
+}
