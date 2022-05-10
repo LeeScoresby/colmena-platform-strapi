@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "errors",
+  "info": {
+    "singularName": "error",
+    "pluralName": "errors",
+    "displayName": "Error"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "error_id": {
+      "type": "biginteger"
+    },
+    "name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "first_family": {
+      "type": "integer"
+    },
+    "second_family": {
+      "type": "string"
+    },
+    "family_complement": {
+      "type": "integer"
+    },
+    "problem_reason": {
+      "type": "text"
+    },
+    "reference": {
+      "type": "text"
+    },
+    "complement_problem_reason": {
+      "type": "biginteger"
+    },
+    "gender": {
+      "type": "text"
+    }
+  }
+}

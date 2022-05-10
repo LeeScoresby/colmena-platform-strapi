@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -42,8 +42,7 @@
     "practice_groups": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::practice-group.practice-group",
-      "mappedBy": "subject"
+      "target": "api::practice-group.practice-group"
     }
   }
 }

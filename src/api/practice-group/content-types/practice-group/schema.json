@@ -4,10 +4,11 @@
   "info": {
     "singularName": "practice-group",
     "pluralName": "practice-groups",
-    "displayName": "PracticeGroup"
+    "displayName": "PracticeGroup",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -16,15 +17,13 @@
     },
     "school_year": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::school-year.school-year",
-      "inversedBy": "practice_groups"
+      "relation": "oneToOne",
+      "target": "api::school-year.school-year"
     },
     "subject": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::subject.subject",
-      "inversedBy": "practice_groups"
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
     },
     "weekDay": {
       "type": "enumeration",
