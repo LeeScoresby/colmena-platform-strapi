@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "compilations",
+  "info": {
+    "singularName": "compilation",
+    "pluralName": "compilations",
+    "displayName": "Compilation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "boolean"
+    },
+    "compilationTime": {
+      "type": "datetime"
+    },
+    "error": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::error.error"
+    },
+    "session": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::session.session"
+    }
+  }
+}

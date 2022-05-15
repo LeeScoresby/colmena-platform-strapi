@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "markers",
+  "info": {
+    "singularName": "marker",
+    "pluralName": "markers",
+    "displayName": "Marker",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "error_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::error.error"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "path": {
+      "type": "string"
+    },
+    "className": {
+      "type": "string"
+    },
+    "ip": {
+      "type": "string"
+    },
+    "project": {
+      "type": "string"
+    },
+    "projectName": {
+      "type": "string"
+    },
+    "lineNumber": {
+      "type": "string"
+    },
+    "customMessage": {
+      "type": "text"
+    },
+    "session_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::session.session"
+    },
+    "update": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}
